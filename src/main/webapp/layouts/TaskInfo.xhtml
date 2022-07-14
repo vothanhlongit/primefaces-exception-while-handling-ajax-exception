@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:p="http://primefaces.org/ui">
+
+<p:tab id="filter-tab">
+  <f:facet name="title">Predefined filters</f:facet>
+
+  <div id="defined-filter-tab">
+    <ui:repeat var="field" value="#{widget.filterableColumns}">
+      <h:panelGroup rendered="#{field.field eq 'priority' and not empty field.priorities}">
+        <div class="ui-g-4">
+          <h:outputText value="#{field.header}:" />
+        </div>
+        <div class="ui-g-8">
+          <ui:repeat var="priority" value="#{field.priorities}">
+            <div>#{priority}</div>
+          </ui:repeat>
+        </div>
+      </h:panelGroup>
+    </ui:repeat>
+  </div>
+</p:tab>
+</html>
