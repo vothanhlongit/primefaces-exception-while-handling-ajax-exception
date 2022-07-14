@@ -4,4 +4,4 @@
 
 This is a sample maven project that uses <strong>PrimeFaces 11.0</strong> version. <strong>Please make sure that project is runnable with the command below.</strong>
 
-You can execute the sample with <strong>mvn clean jetty:run</strong> command and hit <strong>http://localhost:8080/primefaces-test</strong> to run the page.
+You can execute the sample with <strong>mvn clean jetty:run -Pmyfaces22</strong> command and hit <strong>http://localhost:8080/primefaces-test</strong> to run the page.
